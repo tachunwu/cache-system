@@ -1,3 +1,5 @@
+# Cache System
+
 <!-- vscode-markdown-toc -->
 * 1. [衡量 Cache 的指標](#Cache)
 * 2. [Read Intensive Application Caching](#ReadIntensiveApplicationCaching)
@@ -21,7 +23,9 @@
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># Cache System
+<!-- /vscode-markdown-toc -->
+
+
 主要依照 [6-Caching Strategies to Remember while designing Cache System](https://javascript.plainenglish.io/6-caching-strategies-to-remember-while-designing-cache-system-da058a3757cf) 為基礎，做相關的研究和整理。
 
 ##  1. <a name='Cache'></a>衡量 Cache 的指標
