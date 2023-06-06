@@ -151,6 +151,16 @@ Write-around 是用的情境是只有一次性的 Write，而且不更新，甚�
 
 都是互相獨立，Gravity 並沒有 Multi-records Transaction，所以不用考慮這種 Case，也就是說不同的 Data Product，可以不需要考慮 Concurrency Control，只需要在 Data Product Level 保持 Sequential 的處理即可。
 
+實際例子來說，Global 序列化處理雖然一定沒問題，但是沒有必要
+![](./asserts/serialize.jpeg)
+
+我們可以針對 Data Product 做 Partiton，單一個 Data Product 序列化也能保證同樣結果的 Isolation，這邊平行化了 Data Product
+![](./asserts/partition-dataproduct.jpeg)
+
+
+更入深入的說，單一的 Primary Key 做序列化也能保證同樣結果的 Isolation，這邊則是平行化了 Primary Key
+![](./asserts/partition-dataproduct-pk.jpeg)
+
 ###  11.2. <a name=''></a>架構
 ![](./asserts/snapshot.jpeg)
 
